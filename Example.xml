@@ -1,0 +1,24 @@
+    <BCL>
+        <Experiment>
+            <Metadata>
+                <!--No hardware, just simulation in Pybamm-->
+            </Metadata>
+
+            <Hardware>
+                <!--No hardware, just simulation in Pybamm-->
+            </Hardware>
+
+            <Parameters>
+                <Parameter id='Capacity' type='Ah' value='1'/>
+                <Parameter id='NumberOfCellsConnectedInSeries' type='Number' value='1'/>
+                <Parameter id='StandardVoltageCell' type='Voltage' value='3.7'/>
+                <Parameter id='LowerCutoffVoltage' type='Voltage' value='4.2'/>
+                <Parameter id='UpperCutoffVoltage' type='Voltage' value='3'/>
+            </Parameters>
+
+            <BatteryCycling> <!-- Simple CCCV Charge -->
+                <Charge ChargingCurrent="1" CurrentInCRate="1" UpperVoltageLimit="4.2" />
+                <Hold SetVoltage="4.2" CurrentInCRate="1" CutOffCurrent="0.05" />
+            </BatteryCycling>
+        </Experiment>
+    </BCL>
