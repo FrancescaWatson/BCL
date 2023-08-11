@@ -3,26 +3,22 @@ Battery Cycling language
 
 ## Stud of BCL structure
 
+Example YAML file with BCL structure
+
 ```
-    <BCL>
-        <Experiment>
-            <Metadata>
-                <!-- ... -->
-            </Metadata>
+parameters:
 
-            <Hardware>
-                <!-- ... -->
-            </Hardware>
+  Capacity: 2.5
+  UpperCutoffVoltage: 4.2
 
-            <Parameters>
-                <!-- ... -->
-            </Parameters>
-
-            <BatteryCycling>
-                <!-- ... -->
-            </BatteryCycling>
-        </Experiment>
-    </BCL>
+instructions: 
+    - sequence:
+        - type: current
+          value: -1
+          unit: C
+          termination:
+               - type: voltage
+                 value: UpperCutoffVoltage
 ```
 
 
@@ -59,68 +55,32 @@ The  ``Parameters`` section defines parameters of the battery to be used in the 
 | LowerCutoffVoltage | float | Optional. Minimum cell [voltage](http://emmo.info/electrochemistry#electrochemistry_7e53fa42_cf93_4d6e_b753_6f0ef3034648) limit at which an applied signal is reversed or terminated.
 | UpperCutoffVoltage| float | Optional. [Voltage](http://emmo.info/electrochemistry#electrochemistry_6dcd5baf_58cd_43f5_a692_51508e036c88) in V attained at the end of a charging step.
 
-## BatteryCycling
+## Instructions for BatteryCycling
 
-All steps included in the Full Steps Specification may be given within the [``BatteryCycling``](http://emmo.info/battery#battery_1d33b96d_f362_41e5_b670_d33cd6a7ab28) block of a BCL file.
+All steps included may be given within the [``BatteryCycling``](http://emmo.info/battery#battery_1d33b96d_f362_41e5_b670_d33cd6a7ab28) block of a BCL file.
 
-Steps follow a structure of "Do this for this long" or "Do this until this happens"
+The instruction consists of sequences. Sequences can have loops but the default is no repetition (1).
 
-```
-Examples:
-Charge at 1 C for 1 hour
-Charge at 1 C until 4.2 V
-Charge at 1 C for 1 hour or until 4.2 V
-```
+There are several types of blocks within a sequence: "current", "voltage", "rest", "power", or "resistance"
 
-
-Type can be "current", "voltage", "cccv_ode" or "rest", "power", or "resistance"
-
-Value	
-Unit	
-Duration	
-Termination
-Period
-Temperature
-
-
-
-
-### Charge
+### Block within a sequence
 
 | Property  | Type | Description |
 | ------------- | ------------- | -------------|
-| ChargingCurrent | float | Electric current delivered by a battery during its [Charge](http://emmo.info/electrochemistry#electrochemistry_79551e01_4bc6_4292_916e_08fe28a84600).
-| UpperVoltageLimit | float | Maximum cell [voltage](http://emmo.info/electrochemistry#electrochemistry_88d6d177_4b76_4b0a_9a65_aef6592cdb8f) in V limit at which an applied signal is reversed or terminated.
-| time | float | time in seconds, minutes or hours to rest.
-| CurrentInCRate | bool | If not set, default is 0 and current in A.
+| type | string | "current", "voltage", "rest", "power", or "resistance"
+| Value | float | Value of the block
+| Unit | float | (optional) Standard units: current:A, voltage:V, rest:sec, power:W, Resistance:Ohm
+| Termination | block | see below
+| Duration | float | (optional) time in seconds
+| Period | float | (optional) time in seconds
+| Temperature | float | (optional) time in seconds
 
-
-### Discharge
-
-| Property  | Type | Description |
-| ------------- | ------------- | -------------|
-| DischargeCurrent | float | Electric current delivered by a battery during its [Discharge](http://emmo.info/electrochemistry#electrochemistry_e4d666ee_d637_45cd_a904_dc33941ead4f).
-| LowerVoltageLimit | float | Minimum cell [voltage](http://emmo.info/electrochemistry#electrochemistry_7e53fa42_cf93_4d6e_b753_6f0ef3034648) in V limit at which an applied signal is reversed or terminated.
-| time | float | time in seconds, minutes or hours to rest.
-| CurrentInCRate | bool | If not set, default is 0 and current in A.
-
-
-### Hold
+### Termination
 
 | Property  | Type | Description |
 | ------------- | ------------- | -------------|
-| SetVoltage | float | [Voltage](http://emmo.info/electrochemistry#electrochemistry_8427071b_3a01_44b8_9090_5ae0d98675b5) level to hold.
-| CutOffCurrent | float | Cut off current in A or C/Rate.
-| time | float | time in seconds, minutes or hours to rest.
-| CurrentInCRate | bool | If not set, default is 0 and current in A.
-
-### Special
-
-Rest
-| Property  | Type | Description |
-| ------------- | ------------- | -------------|
-| time | float | time in seconds, minutes or hours to rest.
-
+| Value | float | Value of the block
+| Unit | float | example current:A, voltage:V, time:sec
 
 ## Acknowledgement
 
