@@ -49,11 +49,11 @@ The optional ``Hardware`` section should contain extra information about the tes
 
 ## Parameters
 
-The  ``Parameters`` section defines at least the basics of the battery needed for the test.
+The  ``Parameters`` section defines parameters of the battery to be used in the test.
 
 | Property  | Type | Description |
 | ------------- | ------------- | -------------|
-| Capacity  | float | nominal or rated [Capacity](http://emmo.info/battery#battery_df6bdaa9_5275_4a02_a592_adafd4e5c3c3) in Ah of either battery or cell. 
+| Capacity  | float | nominal or rated [Capacity](http://emmo.info/battery#battery_df6bdaa9_5275_4a02_a592_adafd4e5c3c3) in Ah of either battery or cell. Necessary to use C-Rates.
 | NumberOfCellsConnectedInSeries | int | How many cells are in [series](http://emmo.info/electrochemistry#electrochemistry_9d6a52ed_a53d_4327_a391_f173677a4b1d) . If single cell, it is 1.
 | StandardVoltageCell | float | Nominal or [standard voltage](http://emmo.info/battery#battery_3fcdc2ab_f458_4940_b218_6a10d1764567)
 | LowerCutoffVoltage | float | Optional. Minimum cell [voltage](http://emmo.info/electrochemistry#electrochemistry_7e53fa42_cf93_4d6e_b753_6f0ef3034648) limit at which an applied signal is reversed or terminated.
@@ -71,6 +71,19 @@ Charge at 1 C for 1 hour
 Charge at 1 C until 4.2 V
 Charge at 1 C for 1 hour or until 4.2 V
 ```
+
+
+Type can be "current", "voltage", "cccv_ode" or "rest", "power", or "resistance"
+
+Value	
+Unit	
+Duration	
+Termination
+Period
+Temperature
+
+
+
 
 ### Charge
 

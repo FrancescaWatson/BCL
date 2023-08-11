@@ -1,0 +1,36 @@
+# Example YAML file for a 1000-cycle 1C/1C CCCV cycling experiment for a 5 Ah cell with an RPT every 100 cycles
+
+# Global parameters to take precedent over any cycling instructions
+
+globals:
+  # Units really necessary? standard unit and alternative can be named explicitly
+  V_unit: V
+  C_unit: A
+  T_unit: C
+  duration_unit: seconds
+
+  # Parameters
+  Capacity: 2.5
+  NumberOfCellsConnectedInSeries: 1
+  StandardVoltageCell: 3.7 
+  LowerCutoffVoltage: 3
+  UpperCutoffVoltage: 4.2
+
+# list of instructions to follow sequentially
+instructions: # instructions composed from infinitely-nestable sequences
+    - sequence:
+        - type: current
+          value: -1
+          unit: C
+          termination:
+               - type: voltage
+                 value: UpperCutoffVoltage
+        - type: voltage
+          value: 4.2
+          termination:
+               - type: current
+                 value: 0.1
+        - type: rest
+          time: 3600
+      name: CCCV charge
+      repeat: 1 # repeat this sequence 100 times before moving on to the next one
