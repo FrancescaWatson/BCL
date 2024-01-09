@@ -42,7 +42,7 @@
           },
           {
             "type": "rest",
-            "time": 3600
+            "value": 3600
           }
         ],
         "name": "CCCV charge",

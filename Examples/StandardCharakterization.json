@@ -80,7 +80,7 @@
             },
             {
                 "type": "rest",
-                "time": 3600
+                "value": 3600
             },
             {
                 "type": "ElectricCurrent",
@@ -95,7 +95,7 @@
             },
             {
                 "type": "rest",
-                "time": 3600
+                "value": 3600
             },
             {
                 "type": "ElectricCurrent",
@@ -110,7 +110,7 @@
             },
             {
                 "type": "rest",
-                "time": 3600
+                "value": 3600
             }
         ],
         "name": "PseudoOCV",
@@ -131,7 +131,7 @@
           },
           {
             "type": "rest",
-            "time": 12600
+            "value": 12600
           }
         ],
         "name": "GITT_Discharge",
@@ -152,7 +152,7 @@
           },
           {
             "type": "rest",
-            "time": 12600
+            "value": 12600
           }
         ],
         "name": "GITT_Charge",

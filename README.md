@@ -3,22 +3,32 @@ Battery Cycling language
 
 ## Stud of BCL structure
 
-Example YAML file with BCL structure
+Example Json file with BCL structure
 
 ```
-parameters:
-
-  Capacity: 2.5
-  UpperCutoffVoltage: 4.2
-
-instructions: 
-    - sequence:
-        - type: current
-          value: -1
-          unit: C
-          termination:
-               - type: voltage
-                 value: UpperCutoffVoltage
+{
+  "parameters": {
+    "Capacity": 2.5,
+    "UpperCutoffVoltage": 4.2
+  },
+  "instructions": [
+    {
+      "sequence": [
+        {
+          "type": "current",
+          "value": -1,
+          "unit": "C",
+          "termination": [
+            {
+              "type": "voltage",
+              "value": "UpperCutoffVoltage"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
 ```
 
 
@@ -68,19 +78,19 @@ There are several types of blocks within a sequence: "current", "voltage", "rest
 | Property  | Type | Description |
 | ------------- | ------------- | -------------|
 | type | string | "current", "voltage", "rest", "power", or "resistance"
-| Value | float | Value of the block
-| Unit | float | (optional) Standard units: current:A, voltage:V, rest:sec, power:W, Resistance:Ohm
-| Termination | block | see below
-| Duration | float | (optional) time in seconds
-| Period | float | (optional) time in seconds
-| Temperature | float | (optional) time in seconds
+| value | float | value of the block
+| unit | float | (optional) standard units: current:A, voltage:V, rest:sec, power:W, resistance:Ohm
+| termination | block | see below
+| duration | float | (optional) time in seconds
+| period | float | (optional) time in seconds
+| temperature | float | (optional) time in seconds
 
 ### Termination
 
 | Property  | Type | Description |
 | ------------- | ------------- | -------------|
-| Value | float | Value of the block
-| Unit | float | example current:A, voltage:V, time:sec
+| value | float | value of the block
+| unit | float | example current:A, voltage:V, time:sec
 
 ## Acknowledgement
 
@@ -89,5 +99,3 @@ This work is influenced by:
 [Pybamm](https://github.com/pybamm-team/PyBaMM)
 
 [BattINFO](https://emmo-repo.github.io/domain-battery/index.html)
-
-[XDL](https://croningroup.gitlab.io/chemputer/xdl/index.html)

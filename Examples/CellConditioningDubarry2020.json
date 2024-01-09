@@ -82,7 +82,7 @@
           },
           {
             "type": "rest",
-            "time": 14400
+            "value": 14400
           },         
           {
             "type": "ElectricCurrent",
@@ -97,7 +97,7 @@
           },
           {
             "type": "rest",
-            "time": 14400
+            "value": 14400
           },
           {
             "type": "ElectricCurrent",
@@ -123,7 +123,7 @@
           },
           {
             "type": "rest",
-            "time": 14400
+            "value": 14400
           },         
           {
             "type": "ElectricCurrent",
@@ -138,7 +138,7 @@
           },
           {
             "type": "rest",
-            "time": 14400
+            "value": 14400
           }
         ],
         "name": "ConditioningCharacterzation",
