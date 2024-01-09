@@ -22,8 +22,10 @@ schema = {
         "Capacity": {"type": "number"},
         "NumberOfCellsConnectedInSeries": {"type": "integer"},
         "StandardVoltageCell": {"type": "number"},
-        "LowerCutoffVoltage": {"type": "number"},
-        "UpperCutoffVoltage": {"type": "number"}
+        "LowerCutoffVoltage": {"type": "number", "default": 3},
+        "UpperCutoffVoltage": {"type": "number", "default": 4.2},
+        "Temperature": {"type": "number", "default": 25},
+        "Period": {"type": "number", "default": 10}
       },
       "required": ["Capacity", "NumberOfCellsConnectedInSeries", "StandardVoltageCell"]
     },
@@ -63,6 +65,17 @@ schema = {
           }
         },
         "required": ["name", "sequence"]
+      }
+    },
+    "DefaultUnits": {
+      "type": "object",
+      "properties": {
+        "current": {"type": "string", "default": "A"},
+        "voltage": {"type": "string", "default": "V"},
+        "time": {"type": "string", "default": "sec"},
+        "resistance": {"type": "string", "default": "Ohm"},
+        "power": {"type": "string", "default": "W"},
+        "temperature": {"type": "string", "default": "degC"}
       }
     }
   },
