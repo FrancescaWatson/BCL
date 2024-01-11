@@ -1,9 +1,9 @@
 # BCL
 Battery Cycling language
 
-## Stud of BCL structure
+## Study of BCL structure
 
-Example Json file with BCL structure
+Example snippet of a Json file with BCL structure
 
 ```
 {
@@ -34,7 +34,7 @@ Example Json file with BCL structure
 
 ## Metadata
 
-The optional ``Metadata`` section should contain extra information about the cell/battery.
+The optional ``Metadata`` section should contain additional information about the cell/battery.
 
 | Property  | Type | Description |
 | ------------- | ------------- | -------------|
@@ -45,13 +45,13 @@ The optional ``Metadata`` section should contain extra information about the cel
 
 ## Hardware
 
-The optional ``Hardware`` section should contain extra information about the test equipment the test was performed on or is intended to run on.
+The optional ``Hardware`` section should contain extra information about the equipment the test was performed on or is intended to run on.
 
 | Property  | Type | Description |
 | ------------- | ------------- | -------------|
 | Manufacturer  | str | Optional. Manufacturer of the test equipment.
 | Maximum Current  | str | Optional. Maximum current of the test equipment.
-| Current accuracy  | str | Optional. Accuracy of the current measurement of a calibrated device according to the manufacturer.
+| Current Accuracy  | str | Optional. Accuracy of the current measurement of a calibrated device according to the manufacturer.
 
 ## Parameters
 
@@ -59,7 +59,7 @@ The  ``Parameters`` section defines parameters of the battery to be used in the 
 
 | Property  | Type | Description |
 | ------------- | ------------- | -------------|
-| Capacity  | float | nominal or rated [Capacity](http://emmo.info/battery#battery_df6bdaa9_5275_4a02_a592_adafd4e5c3c3) in Ah of either battery or cell. Necessary to use C-Rates.
+| Capacity  | float | Nominal or rated [Capacity](http://emmo.info/battery#battery_df6bdaa9_5275_4a02_a592_adafd4e5c3c3) in Ah of either battery. Necessary to use C-Rates.
 | NumberOfCellsConnectedInSeries | int | How many cells are in [series](http://emmo.info/electrochemistry#electrochemistry_9d6a52ed_a53d_4327_a391_f173677a4b1d) . If single cell, it is 1.
 | StandardVoltageCell | float | Nominal or [standard voltage](http://emmo.info/battery#battery_3fcdc2ab_f458_4940_b218_6a10d1764567)
 | LowerCutoffVoltage | float | Optional. Minimum cell [voltage](http://emmo.info/electrochemistry#electrochemistry_7e53fa42_cf93_4d6e_b753_6f0ef3034648) limit at which an applied signal is reversed or terminated.
