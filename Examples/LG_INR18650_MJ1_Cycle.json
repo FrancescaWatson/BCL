@@ -1,0 +1,108 @@
+
+{
+    "@context": {
+      "Capacity": "http://emmo.info/battery#battery_df6bdaa9_5275_4a02_a592_adafd4e5c3c3",
+      "NumberOfCellsConnectedInSeries": "http://emmo.info/electrochemistry#electrochemistry_9d6a52ed_a53d_4327_a391_f173677a4b1d",
+      "StandardVoltageCell": "http://emmo.info/battery#battery_3fcdc2ab_f458_4940_b218_6a10d1764567",
+      "LowerCutoffVoltage": "http://emmo.info/electrochemistry#electrochemistry_7e53fa42_cf93_4d6e_b753_6f0ef3034648",
+      "UpperCutoffVoltage": "http://emmo.info/electrochemistry#electrochemistry_6dcd5baf_58cd_43f5_a692_51508e036c88",
+      "Voltage" : "http://emmo.info/emmo#EMMO_17b031fb_4695_49b6_bb69_189ec63df3ee",
+      "ElectricCurrent" : "http://emmo.info/emmo#EMMO_c995ae70_3b84_4ebb_bcfc_69e6a281bb88",
+      "TimeDimension" : "http://emmo.info/emmo#EMMO_02e894c3_b793_4197_b120_3442e08f58d1"
+    },
+    "parameters": {
+        "Capacity": 3.4,
+        "NumberOfCellsConnectedInSeries": 1,
+        "StandardVoltageCell": 3.635,
+        "LowerCutoffVoltage": 2.5,
+        "UpperCutoffVoltage": 4.2
+    },
+    "instructions": [
+      {
+        "sequence": [
+          {
+            "type": "ElectricCurrent",
+            "value": -1500,
+            "unit": "mA",
+            "termination": [
+              {
+                "type": "Voltage",
+                "value": "UpperCutoffVoltage"
+              }
+            ]
+          },
+          {
+            "type": "Voltage",
+            "value": 4.2,
+            "termination": [
+              {
+                "type": "ElectricCurrent",
+                "unit": "mA",
+                "value": 100
+              }
+            ]
+          },
+          {
+            "type": "rest",
+            "value": 600
+          },
+          {
+            "type": "ElectricCurrent",
+            "value": 4000,
+            "unit": "mA",
+            "termination": [
+              {
+                "type": "Voltage",
+                "value": "LowerCutoffVoltage"
+              }
+            ]
+          },
+          {
+            "type": "rest",
+            "value": 600
+          }
+        ],
+        "name": "HighDrainrateChargeDischargecondition",
+        "repeat": 400
+      },
+      {
+        "sequence": [
+          {
+            "type": "ElectricCurrent",
+            "value": -0.5,
+            "unit": "C",
+            "termination": [
+              {
+                "type": "Voltage",
+                "value": "UpperCutoffVoltage"
+              }
+            ]
+          },
+          {
+            "type": "Voltage",
+            "value": 4.2,
+            "termination": [
+              {
+                "type": "ElectricCurrent",
+                "unit": "mAh",
+                "value": 50
+              }
+            ]
+          },       
+          {
+            "type": "ElectricCurrent",
+            "value": 0.2,
+            "unit": "C",
+            "termination": [
+              {
+                "type": "Voltage",
+                "value": "LowerCutoffVoltage"
+              }
+            ]
+          }
+        ],
+        "name": "cycle_401_reference_test",
+        "repeat": 1
+      }
+    ]
+}
