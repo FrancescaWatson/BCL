@@ -1,4 +1,6 @@
-{
+{   
+    "@context": "https://w3id.org/emmo/domain/battery/context",
+    "schema:name": "MinimalExample",
     "parameters": {
       "Capacity": 2.5,
       "UpperCutoffVoltage": 4.2
