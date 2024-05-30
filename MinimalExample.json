@@ -1,0 +1,23 @@
+{
+    "parameters": {
+      "Capacity": 2.5,
+      "UpperCutoffVoltage": 4.2
+    },
+    "instructions": [
+      {
+        "sequence": [
+          {
+            "type": "current",
+            "value": -1,
+            "unit": "C",
+            "termination": [
+              {
+                "type": "voltage",
+                "value": "UpperCutoffVoltage"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
