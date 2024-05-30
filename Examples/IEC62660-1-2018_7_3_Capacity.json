@@ -1,0 +1,133 @@
+{
+    "@context": "https://w3id.org/emmo/domain/battery/context",
+    "schema:name": "IEC62660-1-2018",
+    "schema:citation": {"@id" : "https://webstore.iec.ch/publication/28965"},
+    "parameters": {
+        "Capacity": 3.4,
+        "NumberOfCellsConnectedInSeries": 1,
+        "StandardVoltageCell": 3.635,
+        "LowerCutoffVoltage": 2.5,
+        "UpperCutoffVoltage": 4.2
+    },
+    "instructions": [
+        {
+            "sequence": [
+                {
+                    "type": "ElectricCurrent",
+                    "hasNumericalValue": 0.33,
+                    "hasMeasurementUnit": "CRate",
+                    "termination": [
+                      {
+                        "type": "Voltage",
+                        "hasNumericalValue": "LowerCutoffVoltage",
+                        "hasMeasurementUnit": "emmo:Volt"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ElectricCurrent",
+                    "hasNumericalValue": -0.33,
+                    "hasMeasurementUnit": "CRate",
+                    "termination": [
+                      {
+                        "type": "Voltage",
+                        "hasNumericalValue": "UpperCutoffVoltage",
+                        "hasMeasurementUnit": "emmo:Volt"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Voltage",
+                    "hasNumericalValue": "UpperCutoffVoltage",
+                    "hasMeasurementUnit": "emmo:Volt",
+                    "termination": [
+                      {
+                        "type": "ElectricCurrent",
+                        "hasNumericalValue": 0.05,
+                        "hasMeasurementUnit": "emmo:Ampere"
+                      }
+                    ]
+                  }
+
+              ],
+              "name": "7.2 Charge",
+              "repeat": 1
+            },
+        {
+            "sequence": [
+              {            
+                "sequence": [
+                {
+                    "type": "ElectricCurrent",
+                    "hasNumericalValue": 0.33,
+                    "hasMeasurementUnit": "CRate",
+                    "termination": [
+                      {
+                        "type": "Voltage",
+                        "hasNumericalValue": "LowerCutoffVoltage",
+                        "hasMeasurementUnit": "emmo:Volt"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ElectricCurrent",
+                    "hasNumericalValue": -0.33,
+                    "hasMeasurementUnit": "CRate",
+                    "termination": [
+                      {
+                        "type": "Voltage",
+                        "hasNumericalValue": "UpperCutoffVoltage",
+                        "hasMeasurementUnit": "emmo:Volt"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Voltage",
+                    "hasNumericalValue": "UpperCutoffVoltage",
+                    "hasMeasurementUnit": "emmo:Volt",
+                    "termination": [
+                      {
+                        "type": "ElectricCurrent",
+                        "hasNumericalValue": 0.05,
+                        "hasMeasurementUnit": "emmo:Ampere"
+                      }]
+                  }],
+                  "name": "7.2 Charge",
+                  "repeat": 1
+                },
+              {
+                "sequence": [
+                {
+                  "type": "rest",
+                  "hasNumericalValue": 12,
+                  "hasMeasurementUnit": "emmo:Hour"
+                  }],
+                  "name": "4.4 Thermal stabilization",
+                  "repeat": 1
+                  },
+              {
+                "type": "ElectricCurrent",
+                "hasNumericalValue": 0.33,
+                "hasMeasurementUnit": "CRate",
+                "termination": [
+                  {
+                    "type": "Voltage",
+                    "hasNumericalValue": "LowerCutoffVoltage",
+                    "hasMeasurementUnit": "emmo:Volt"
+                  }
+                ]
+              }
+            ],
+              "name": "7.3 Capacity",
+              "repeat": 1
+            },
+        {
+          "sequence": [
+            {}
+            ],
+            "name": "7.8.2 BEV cycle test",
+            "repeat": 1
+          }
+        ]
+}
+
