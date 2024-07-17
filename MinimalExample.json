@@ -9,13 +9,14 @@
       {
         "sequence": [
           {
-            "type": "current",
-            "value": -1,
-            "unit": "C",
+            "@type": "ElectricCurrent",
+            "hasNumericalValue": -1,
+            "hasMeasurementUnit": "CRate",
             "termination": [
               {
-                "type": "voltage",
-                "value": "UpperCutoffVoltage"
+                "@type": "Voltage",
+                "hasNumericalValue": "UpperCutoffVoltage",
+                "hasMeasurementUnit": "emmo:Volt"
               }
             ]
           }
