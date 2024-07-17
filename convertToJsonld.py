@@ -59,11 +59,14 @@ def convert_to_json_ld(json_data):
             numerical_value = step['hasNumericalValue']
             if not isinstance(numerical_value, (int, float)):
                 numerical_value = parameters.get(numerical_value, numerical_value)
+            termination_unit=step['termination'][0]['hasMeasurementUnit']
+            if termination_unit == "CRate":
+                termination_unit="emmo:AmperePerAmpereHour"
             task = {
                 "@type": "ConstantVoltageCharging",
                 "hasMeasurementParameter": [
-                    create_measurement_parameter("Voltage", numerical_value, step['hasMeasurementUnit']),
-                    create_measurement_parameter("CurrentLimit", parameters.get(step['termination'][0]['hasNumericalValue'], step['termination'][0]['hasNumericalValue']), step['termination'][0]['hasMeasurementUnit'])
+                    create_measurement_parameter("ChargingVoltage" if numerical_value < 0 else "DischargingVoltage", numerical_value, step['hasMeasurementUnit']),
+                    create_measurement_parameter("TerminationCurrent", parameters.get(step['termination'][0]['hasNumericalValue'], step['termination'][0]['hasNumericalValue']), termination_unit)
                 ]
             }
         elif step['@type'] == 'rest':
@@ -71,7 +74,7 @@ def convert_to_json_ld(json_data):
             if not isinstance(numerical_value, (int, float)):
                 numerical_value = parameters.get(numerical_value, numerical_value)
             task = {
-                "@type": "InternalStep",
+                "@type": "RestingStep",
                 "hasMeasurementParameter": [
                     create_measurement_parameter("RestingTime", numerical_value, step['hasMeasurementUnit'])
                 ]

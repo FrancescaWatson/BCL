@@ -4,7 +4,7 @@
         "schema": "http://schema.org/",
         "emmo": "http://emmo.info/emmo#"
     },
-    "@id": "1382ed25-8a2e-4295-9b59-7f9d4e4f2a65",
+    "@id": "d9ffe95c-2f05-438e-8a98-5dae2b473da6",
     "hasTask": [
         {
             "@type": [
@@ -45,7 +45,7 @@
                         "@type": "ConstantVoltageCharging",
                         "hasMeasurementParameter": [
                             {
-                                "@type": "Voltage",
+                                "@type": "DischargingVoltage",
                                 "hasNumericalPart": {
                                     "@type": "Real",
                                     "hasNumericalValue": 4.2
@@ -53,7 +53,7 @@
                                 "hasMeasurementUnit": "emmo:Volt"
                             },
                             {
-                                "@type": "CurrentLimit",
+                                "@type": "TerminationCurrent",
                                 "hasNumericalPart": {
                                     "@type": "Real",
                                     "hasNumericalValue": 0.05
@@ -127,7 +127,7 @@
                         "@type": "ConstantVoltageCharging",
                         "hasMeasurementParameter": [
                             {
-                                "@type": "Voltage",
+                                "@type": "DischargingVoltage",
                                 "hasNumericalPart": {
                                     "@type": "Real",
                                     "hasNumericalValue": 4.2
@@ -135,7 +135,7 @@
                                 "hasMeasurementUnit": "emmo:Volt"
                             },
                             {
-                                "@type": "CurrentLimit",
+                                "@type": "TerminationCurrent",
                                 "hasNumericalPart": {
                                     "@type": "Real",
                                     "hasNumericalValue": 0.05
@@ -145,7 +145,7 @@
                         ],
                         "hasNext": [
                             {
-                                "@type": "InternalStep",
+                                "@type": "RestingStep",
                                 "hasMeasurementParameter": [
                                     {
                                         "@type": "RestingTime",
@@ -179,7 +179,7 @@
                                         ],
                                         "hasNext": [
                                             {
-                                                "@type": "InternalStep",
+                                                "@type": "RestingStep",
                                                 "hasMeasurementParameter": [
                                                     {
                                                         "@type": "RestingTime",
@@ -236,7 +236,7 @@
                 ],
                 "hasNext": [
                     {
-                        "@type": "InternalStep",
+                        "@type": "RestingStep",
                         "hasMeasurementParameter": [
                             {
                                 "@type": "RestingTime",
@@ -270,7 +270,7 @@
                                 ],
                                 "hasNext": [
                                     {
-                                        "@type": "InternalStep",
+                                        "@type": "RestingStep",
                                         "hasMeasurementParameter": [
                                             {
                                                 "@type": "RestingTime",
@@ -304,7 +304,7 @@
                                                 ],
                                                 "hasNext": [
                                                     {
-                                                        "@type": "InternalStep",
+                                                        "@type": "RestingStep",
                                                         "hasMeasurementParameter": [
                                                             {
                                                                 "@type": "RestingTime",

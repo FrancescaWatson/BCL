@@ -4,7 +4,7 @@
         "schema": "http://schema.org/",
         "emmo": "http://emmo.info/emmo#"
     },
-    "@id": "f22051d8-10b0-4cfd-b75f-429e67db441f",
+    "@id": "096b51ce-b846-4443-a14a-20a35cb8b7c5",
     "hasTask": [
         {
             "@type": [
@@ -42,7 +42,7 @@
                 ],
                 "hasNext": [
                     {
-                        "@type": "InternalStep",
+                        "@type": "RestingStep",
                         "hasMeasurementParameter": [
                             {
                                 "@type": "RestingTime",
@@ -76,7 +76,7 @@
                                 ],
                                 "hasNext": [
                                     {
-                                        "@type": "InternalStep",
+                                        "@type": "RestingStep",
                                         "hasMeasurementParameter": [
                                             {
                                                 "@type": "RestingTime",
@@ -131,7 +131,7 @@
                 ],
                 "hasNext": [
                     {
-                        "@type": "InternalStep",
+                        "@type": "RestingStep",
                         "hasMeasurementParameter": [
                             {
                                 "@type": "RestingTime",
@@ -165,7 +165,7 @@
                                 ],
                                 "hasNext": [
                                     {
-                                        "@type": "InternalStep",
+                                        "@type": "RestingStep",
                                         "hasMeasurementParameter": [
                                             {
                                                 "@type": "RestingTime",
@@ -199,7 +199,7 @@
                                                 ],
                                                 "hasNext": [
                                                     {
-                                                        "@type": "InternalStep",
+                                                        "@type": "RestingStep",
                                                         "hasMeasurementParameter": [
                                                             {
                                                                 "@type": "RestingTime",
@@ -233,7 +233,7 @@
                                                                 ],
                                                                 "hasNext": [
                                                                     {
-                                                                        "@type": "InternalStep",
+                                                                        "@type": "RestingStep",
                                                                         "hasMeasurementParameter": [
                                                                             {
                                                                                 "@type": "RestingTime",
@@ -296,7 +296,7 @@
                 ],
                 "hasNext": [
                     {
-                        "@type": "InternalStep",
+                        "@type": "RestingStep",
                         "hasMeasurementParameter": [
                             {
                                 "@type": "RestingTime",
@@ -330,7 +330,7 @@
                                 ],
                                 "hasNext": [
                                     {
-                                        "@type": "InternalStep",
+                                        "@type": "RestingStep",
                                         "hasMeasurementParameter": [
                                             {
                                                 "@type": "RestingTime",
@@ -364,7 +364,7 @@
                                                 ],
                                                 "hasNext": [
                                                     {
-                                                        "@type": "InternalStep",
+                                                        "@type": "RestingStep",
                                                         "hasMeasurementParameter": [
                                                             {
                                                                 "@type": "RestingTime",
@@ -398,7 +398,7 @@
                                                                 ],
                                                                 "hasNext": [
                                                                     {
-                                                                        "@type": "InternalStep",
+                                                                        "@type": "RestingStep",
                                                                         "hasMeasurementParameter": [
                                                                             {
                                                                                 "@type": "RestingTime",

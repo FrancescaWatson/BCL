@@ -4,7 +4,7 @@
         "schema": "http://schema.org/",
         "emmo": "http://emmo.info/emmo#"
     },
-    "@id": "9411f836-fe7f-402f-b913-4596fcd3d3c2",
+    "@id": "c95b8e34-773e-4369-96bd-6c5e181c1da0",
     "hasTask": [
         {
             "@type": [
@@ -45,7 +45,7 @@
                         "@type": "ConstantVoltageCharging",
                         "hasMeasurementParameter": [
                             {
-                                "@type": "Voltage",
+                                "@type": "DischargingVoltage",
                                 "hasNumericalPart": {
                                     "@type": "Real",
                                     "hasNumericalValue": 4.2
@@ -53,12 +53,12 @@
                                 "hasMeasurementUnit": "emmo:Volt"
                             },
                             {
-                                "@type": "CurrentLimit",
+                                "@type": "TerminationCurrent",
                                 "hasNumericalPart": {
                                     "@type": "Real",
                                     "hasNumericalValue": 0.05
                                 },
-                                "hasMeasurementUnit": "CRate"
+                                "hasMeasurementUnit": "emmo:AmperePerAmpereHour"
                             }
                         ],
                         "hasNext": [
@@ -127,7 +127,7 @@
                         "@type": "ConstantVoltageCharging",
                         "hasMeasurementParameter": [
                             {
-                                "@type": "Voltage",
+                                "@type": "DischargingVoltage",
                                 "hasNumericalPart": {
                                     "@type": "Real",
                                     "hasNumericalValue": 4.2
@@ -135,17 +135,17 @@
                                 "hasMeasurementUnit": "emmo:Volt"
                             },
                             {
-                                "@type": "CurrentLimit",
+                                "@type": "TerminationCurrent",
                                 "hasNumericalPart": {
                                     "@type": "Real",
                                     "hasNumericalValue": 0.05
                                 },
-                                "hasMeasurementUnit": "CRate"
+                                "hasMeasurementUnit": "emmo:AmperePerAmpereHour"
                             }
                         ],
                         "hasNext": [
                             {
-                                "@type": "InternalStep",
+                                "@type": "RestingStep",
                                 "hasMeasurementParameter": [
                                     {
                                         "@type": "RestingTime",
@@ -179,7 +179,7 @@
                                         ],
                                         "hasNext": [
                                             {
-                                                "@type": "InternalStep",
+                                                "@type": "RestingStep",
                                                 "hasMeasurementParameter": [
                                                     {
                                                         "@type": "RestingTime",
@@ -216,7 +216,7 @@
                                                                 "@type": "ConstantVoltageCharging",
                                                                 "hasMeasurementParameter": [
                                                                     {
-                                                                        "@type": "Voltage",
+                                                                        "@type": "DischargingVoltage",
                                                                         "hasNumericalPart": {
                                                                             "@type": "Real",
                                                                             "hasNumericalValue": 4.2
@@ -224,17 +224,17 @@
                                                                         "hasMeasurementUnit": "emmo:Volt"
                                                                     },
                                                                     {
-                                                                        "@type": "CurrentLimit",
+                                                                        "@type": "TerminationCurrent",
                                                                         "hasNumericalPart": {
                                                                             "@type": "Real",
                                                                             "hasNumericalValue": 0.05
                                                                         },
-                                                                        "hasMeasurementUnit": "CRate"
+                                                                        "hasMeasurementUnit": "emmo:AmperePerAmpereHour"
                                                                     }
                                                                 ],
                                                                 "hasNext": [
                                                                     {
-                                                                        "@type": "InternalStep",
+                                                                        "@type": "RestingStep",
                                                                         "hasMeasurementParameter": [
                                                                             {
                                                                                 "@type": "RestingTime",
@@ -268,7 +268,7 @@
                                                                                 ],
                                                                                 "hasNext": [
                                                                                     {
-                                                                                        "@type": "InternalStep",
+                                                                                        "@type": "RestingStep",
                                                                                         "hasMeasurementParameter": [
                                                                                             {
                                                                                                 "@type": "RestingTime",
