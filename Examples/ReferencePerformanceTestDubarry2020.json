@@ -67,7 +67,8 @@
           },
           {
             "@type": "rest",
-            "hasNumericalValue": 14400
+            "hasNumericalValue": 14400,
+            "hasMeasurementUnit": "emmo:Second"
           },
           {
             "@type": "ElectricCurrent",
@@ -83,7 +84,8 @@
           },
           {
             "@type": "rest",
-            "hasNumericalValue": 14400
+            "hasNumericalValue": 14400,
+            "hasMeasurementUnit": "emmo:Second"
           },
           {
             "@type": "ElectricCurrent",
@@ -132,7 +134,8 @@
             "termination": [
               {
                 "@type": "Voltage",
-                "hasNumericalValue": "LowerCutoffVoltage"
+                "hasNumericalValue": "LowerCutoffVoltage",
+                "hasMeasurementUnit": "emmo:Volt"
               }
             ]
           },
@@ -148,7 +151,8 @@
             "termination": [
               {
                 "@type": "Voltage",
-                "hasNumericalValue": "LowerCutoffVoltage"
+                "hasNumericalValue": "LowerCutoffVoltage",
+                "hasMeasurementUnit": "emmo:Volt"
               }
             ]
           },

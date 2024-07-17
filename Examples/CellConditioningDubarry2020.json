@@ -137,6 +137,7 @@
             "termination": [
               {
                 "@type": "Voltage",
+                "hasMeasurementUnit": "emmo:Volt",
                 "hasNumericalValue": "LowerCutoffVoltage"
               }
             ]

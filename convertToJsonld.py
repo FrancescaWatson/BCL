@@ -1,4 +1,5 @@
 import json
+import uuid
 
 def convert_to_json_ld(json_data):
     # Define the context and other JSON-LD specific fields
@@ -11,6 +12,7 @@ def convert_to_json_ld(json_data):
     # Initialize the JSON-LD data with the context and other fields
     json_ld_data = {
         "@context": context,
+        "@id": str(uuid.uuid4()),
         "hasTask": []
     }
 

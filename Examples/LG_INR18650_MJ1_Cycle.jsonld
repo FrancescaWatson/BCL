@@ -1,0 +1,207 @@
+{
+    "@context": {
+        "@context": "https://w3id.org/emmo/domain/battery/context",
+        "schema": "http://schema.org/",
+        "emmo": "http://emmo.info/emmo#"
+    },
+    "@id": "https://www.wikidata.org/wiki/Q120766894",
+    "hasTask": [
+        {
+            "@type": [
+                "CCCVCycling",
+                "IterativeWorkflow"
+            ],
+            "rdfs:label": "HighDrainrateChargeDischargecondition",
+            "hasMeasurementParameter": {
+                "@type": "IterativeStep",
+                "hasNumericalPart": {
+                    "@type": "Real",
+                    "hasNumericalValue": 400
+                },
+                "hasMeasurementUnit": "emmo:UnitOne"
+            },
+            "hasTask": {
+                "@type": "ConstantCurrentCharging",
+                "hasMeasurementParameter": [
+                    {
+                        "@type": "ChargingCurrent",
+                        "hasNumericalPart": {
+                            "@type": "Real",
+                            "hasNumericalValue": 1.5
+                        },
+                        "hasMeasurementUnit": "emmo:Ampere"
+                    },
+                    {
+                        "@type": "UpperVoltageLimit",
+                        "hasNumericalPart": {
+                            "@type": "Real",
+                            "hasNumericalValue": 4.2
+                        },
+                        "hasMeasurementUnit": "emmo:Volt"
+                    }
+                ],
+                "hasNext": [
+                    {
+                        "@type": "ConstantVoltageCharging",
+                        "hasMeasurementParameter": [
+                            {
+                                "@type": "Voltage",
+                                "hasNumericalPart": {
+                                    "@type": "Real",
+                                    "hasNumericalValue": 4.2
+                                },
+                                "hasMeasurementUnit": "emmo:Volt"
+                            },
+                            {
+                                "@type": "CurrentLimit",
+                                "hasNumericalPart": {
+                                    "@type": "Real",
+                                    "hasNumericalValue": 0.1
+                                },
+                                "hasMeasurementUnit": "emmo:Ampere"
+                            }
+                        ],
+                        "hasNext": [
+                            {
+                                "@type": "InternalStep",
+                                "hasMeasurementParameter": [
+                                    {
+                                        "@type": "RestingTime",
+                                        "hasNumericalPart": {
+                                            "@type": "Real",
+                                            "hasNumericalValue": 600
+                                        },
+                                        "hasMeasurementUnit": "emmo:Second"
+                                    }
+                                ],
+                                "hasNext": [
+                                    {
+                                        "@type": "ConstantCurrentDischarging",
+                                        "hasMeasurementParameter": [
+                                            {
+                                                "@type": "DischargingCurrent",
+                                                "hasNumericalPart": {
+                                                    "@type": "Real",
+                                                    "hasNumericalValue": 4.0
+                                                },
+                                                "hasMeasurementUnit": "emmo:Ampere"
+                                            },
+                                            {
+                                                "@type": "LowerVoltageLimit",
+                                                "hasNumericalPart": {
+                                                    "@type": "Real",
+                                                    "hasNumericalValue": 2.5
+                                                },
+                                                "hasMeasurementUnit": "emmo:Volt"
+                                            }
+                                        ],
+                                        "hasNext": [
+                                            {
+                                                "@type": "InternalStep",
+                                                "hasMeasurementParameter": [
+                                                    {
+                                                        "@type": "RestingTime",
+                                                        "hasNumericalPart": {
+                                                            "@type": "Real",
+                                                            "hasNumericalValue": 600
+                                                        },
+                                                        "hasMeasurementUnit": "emmo:Second"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "@type": [
+                "CCCVCycling",
+                "IterativeWorkflow"
+            ],
+            "rdfs:label": "cycle_401_reference_test",
+            "hasMeasurementParameter": {
+                "@type": "IterativeStep",
+                "hasNumericalPart": {
+                    "@type": "Real",
+                    "hasNumericalValue": 1
+                },
+                "hasMeasurementUnit": "emmo:UnitOne"
+            },
+            "hasTask": {
+                "@type": "ConstantCurrentCharging",
+                "hasMeasurementParameter": [
+                    {
+                        "@type": "ChargingCurrent",
+                        "hasNumericalPart": {
+                            "@type": "Real",
+                            "hasNumericalValue": 0.5
+                        },
+                        "hasMeasurementUnit": "CRate"
+                    },
+                    {
+                        "@type": "UpperVoltageLimit",
+                        "hasNumericalPart": {
+                            "@type": "Real",
+                            "hasNumericalValue": 4.2
+                        },
+                        "hasMeasurementUnit": "emmo:Volt"
+                    }
+                ],
+                "hasNext": [
+                    {
+                        "@type": "ConstantVoltageCharging",
+                        "hasMeasurementParameter": [
+                            {
+                                "@type": "Voltage",
+                                "hasNumericalPart": {
+                                    "@type": "Real",
+                                    "hasNumericalValue": 4.2
+                                },
+                                "hasMeasurementUnit": "emmo:Volt"
+                            },
+                            {
+                                "@type": "CurrentLimit",
+                                "hasNumericalPart": {
+                                    "@type": "Real",
+                                    "hasNumericalValue": 0.05
+                                },
+                                "hasMeasurementUnit": "emmo:Ampere"
+                            }
+                        ],
+                        "hasNext": [
+                            {
+                                "@type": "ConstantCurrentDischarging",
+                                "hasMeasurementParameter": [
+                                    {
+                                        "@type": "DischargingCurrent",
+                                        "hasNumericalPart": {
+                                            "@type": "Real",
+                                            "hasNumericalValue": 0.2
+                                        },
+                                        "hasMeasurementUnit": "CRate"
+                                    },
+                                    {
+                                        "@type": "LowerVoltageLimit",
+                                        "hasNumericalPart": {
+                                            "@type": "Real",
+                                            "hasNumericalValue": 2.5
+                                        },
+                                        "hasMeasurementUnit": "emmo:Volt"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "schema:name": "Cyclelifecondition",
+    "schema:subjectOf": "LG Chem INR18650 MJ1",
+    "schema:citation": "Specification%20INR18650MJ1%2022.08.2014.pdf"
+}

@@ -1,0 +1,140 @@
+{
+    "@context": {
+        "@context": "https://w3id.org/emmo/domain/battery/context",
+        "schema": "http://schema.org/",
+        "emmo": "http://emmo.info/emmo#"
+    },
+    "@id": "35cae141-5bb1-4e17-936d-eedcd10f1500",
+    "hasTask": [
+        {
+            "@type": [
+                "CCCVCycling",
+                "IterativeWorkflow"
+            ],
+            "rdfs:label": "7.2 Charge",
+            "hasMeasurementParameter": {
+                "@type": "IterativeStep",
+                "hasNumericalPart": {
+                    "@type": "Real",
+                    "hasNumericalValue": 1
+                },
+                "hasMeasurementUnit": "emmo:UnitOne"
+            },
+            "hasTask": {
+                "@type": "ConstantCurrentDischarging",
+                "hasMeasurementParameter": [
+                    {
+                        "@type": "DischargingCurrent",
+                        "hasNumericalPart": {
+                            "@type": "Real",
+                            "hasNumericalValue": 0.33
+                        },
+                        "hasMeasurementUnit": "CRate"
+                    },
+                    {
+                        "@type": "LowerVoltageLimit",
+                        "hasNumericalPart": {
+                            "@type": "Real",
+                            "hasNumericalValue": 2.5
+                        },
+                        "hasMeasurementUnit": "emmo:Volt"
+                    }
+                ],
+                "hasNext": [
+                    {
+                        "@type": "ConstantCurrentCharging",
+                        "hasMeasurementParameter": [
+                            {
+                                "@type": "ChargingCurrent",
+                                "hasNumericalPart": {
+                                    "@type": "Real",
+                                    "hasNumericalValue": 0.33
+                                },
+                                "hasMeasurementUnit": "CRate"
+                            },
+                            {
+                                "@type": "UpperVoltageLimit",
+                                "hasNumericalPart": {
+                                    "@type": "Real",
+                                    "hasNumericalValue": 4.2
+                                },
+                                "hasMeasurementUnit": "emmo:Volt"
+                            }
+                        ],
+                        "hasNext": [
+                            {
+                                "@type": "ConstantVoltageCharging",
+                                "hasMeasurementParameter": [
+                                    {
+                                        "@type": "Voltage",
+                                        "hasNumericalPart": {
+                                            "@type": "Real",
+                                            "hasNumericalValue": 4.2
+                                        },
+                                        "hasMeasurementUnit": "emmo:Volt"
+                                    },
+                                    {
+                                        "@type": "CurrentLimit",
+                                        "hasNumericalPart": {
+                                            "@type": "Real",
+                                            "hasNumericalValue": 0.05
+                                        },
+                                        "hasMeasurementUnit": "emmo:Ampere"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "@type": [
+                "CCCVCycling",
+                "IterativeWorkflow"
+            ],
+            "rdfs:label": "4.4 Thermal stabilization",
+            "hasMeasurementParameter": {
+                "@type": "IterativeStep",
+                "hasNumericalPart": {
+                    "@type": "Real",
+                    "hasNumericalValue": 1
+                },
+                "hasMeasurementUnit": "emmo:UnitOne"
+            },
+            "hasTask": {
+                "@type": "InternalStep",
+                "hasMeasurementParameter": [
+                    {
+                        "@type": "RestingTime",
+                        "hasNumericalPart": {
+                            "@type": "Real",
+                            "hasNumericalValue": 12
+                        },
+                        "hasMeasurementUnit": "emmo:Hour"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": [
+                "CCCVCycling",
+                "IterativeWorkflow"
+            ],
+            "rdfs:label": "7.3 Capacity",
+            "hasMeasurementParameter": {
+                "@type": "IterativeStep",
+                "hasNumericalPart": {
+                    "@type": "Real",
+                    "hasNumericalValue": 1
+                },
+                "hasMeasurementUnit": "emmo:UnitOne"
+            },
+            "hasTask": null
+        }
+    ],
+    "schema:name": "IEC62660-1-2018",
+    "schema:citation": {
+        "@id": "https://webstore.iec.ch/publication/28965"
+    }
+}

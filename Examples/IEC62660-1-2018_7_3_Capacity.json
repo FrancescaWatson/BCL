@@ -12,93 +12,48 @@
     "instructions": [
         {
             "sequence": [
-                {
-                    "type": "ElectricCurrent",
-                    "hasNumericalValue": 0.33,
-                    "hasMeasurementUnit": "CRate",
-                    "termination": [
-                      {
-                        "type": "Voltage",
-                        "hasNumericalValue": "LowerCutoffVoltage",
-                        "hasMeasurementUnit": "emmo:Volt"
-                      }
-                    ]
-                  },
+              {            
+                "@type": "ElectricCurrent",
+                "hasNumericalValue": 0.33,
+                "hasMeasurementUnit": "CRate",
+                "termination": [
                   {
-                    "type": "ElectricCurrent",
-                    "hasNumericalValue": -0.33,
-                    "hasMeasurementUnit": "CRate",
-                    "termination": [
-                      {
-                        "type": "Voltage",
-                        "hasNumericalValue": "UpperCutoffVoltage",
-                        "hasMeasurementUnit": "emmo:Volt"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "Voltage",
-                    "hasNumericalValue": "UpperCutoffVoltage",
-                    "hasMeasurementUnit": "emmo:Volt",
-                    "termination": [
-                      {
-                        "type": "ElectricCurrent",
-                        "hasNumericalValue": 0.05,
-                        "hasMeasurementUnit": "emmo:Ampere"
-                      }
-                    ]
+                    "@type": "Voltage",
+                    "hasNumericalValue": "LowerCutoffVoltage",
+                    "hasMeasurementUnit": "emmo:Volt"
                   }
-
-              ],
+                ]
+              },
+              {
+                "@type": "ElectricCurrent",
+                "hasNumericalValue": -0.33,
+                "hasMeasurementUnit": "CRate",
+                "termination": [
+                  {
+                    "@type": "Voltage",
+                    "hasNumericalValue": "UpperCutoffVoltage",
+                    "hasMeasurementUnit": "emmo:Volt"
+                  }
+                ]
+              },
+              {
+                "@type": "Voltage",
+                "hasNumericalValue": "UpperCutoffVoltage",
+                "hasMeasurementUnit": "emmo:Volt",
+                "termination": [
+                  {
+                    "@type": "ElectricCurrent",
+                    "hasNumericalValue": 0.05,
+                    "hasMeasurementUnit": "emmo:Ampere"
+                  }]
+              }],
               "name": "7.2 Charge",
               "repeat": 1
-            },
-        {
-            "sequence": [
-              {            
-                "sequence": [
-                {
-                    "type": "ElectricCurrent",
-                    "hasNumericalValue": 0.33,
-                    "hasMeasurementUnit": "CRate",
-                    "termination": [
-                      {
-                        "type": "Voltage",
-                        "hasNumericalValue": "LowerCutoffVoltage",
-                        "hasMeasurementUnit": "emmo:Volt"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "ElectricCurrent",
-                    "hasNumericalValue": -0.33,
-                    "hasMeasurementUnit": "CRate",
-                    "termination": [
-                      {
-                        "type": "Voltage",
-                        "hasNumericalValue": "UpperCutoffVoltage",
-                        "hasMeasurementUnit": "emmo:Volt"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "Voltage",
-                    "hasNumericalValue": "UpperCutoffVoltage",
-                    "hasMeasurementUnit": "emmo:Volt",
-                    "termination": [
-                      {
-                        "type": "ElectricCurrent",
-                        "hasNumericalValue": 0.05,
-                        "hasMeasurementUnit": "emmo:Ampere"
-                      }]
-                  }],
-                  "name": "7.2 Charge",
-                  "repeat": 1
                 },
               {
                 "sequence": [
                 {
-                  "type": "rest",
+                  "@type": "rest",
                   "hasNumericalValue": 12,
                   "hasMeasurementUnit": "emmo:Hour"
                   }],
@@ -106,28 +61,18 @@
                   "repeat": 1
                   },
               {
-                "type": "ElectricCurrent",
+                "@type": "ElectricCurrent",
                 "hasNumericalValue": 0.33,
                 "hasMeasurementUnit": "CRate",
                 "termination": [
                   {
-                    "type": "Voltage",
+                    "@type": "Voltage",
                     "hasNumericalValue": "LowerCutoffVoltage",
                     "hasMeasurementUnit": "emmo:Volt"
                   }
-                ]
-              }
-            ],
+                ],
               "name": "7.3 Capacity",
               "repeat": 1
-            },
-        {
-          "sequence": [
-            {}
-            ],
-            "name": "7.8.2 BEV cycle test",
-            "repeat": 1
-          }
+            }
         ]
 }
-

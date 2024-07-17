@@ -1,0 +1,307 @@
+{
+    "@context": {
+        "@context": "https://w3id.org/emmo/domain/battery/context",
+        "schema": "http://schema.org/",
+        "emmo": "http://emmo.info/emmo#"
+    },
+    "@id": "4e711e61-34a9-4ea9-b28f-fe5c72d82c71",
+    "hasTask": [
+        {
+            "@type": [
+                "CCCVCycling",
+                "IterativeWorkflow"
+            ],
+            "rdfs:label": null,
+            "hasMeasurementParameter": {
+                "@type": "IterativeStep",
+                "hasNumericalPart": {
+                    "@type": "Real",
+                    "hasNumericalValue": 3
+                },
+                "hasMeasurementUnit": "emmo:UnitOne"
+            },
+            "hasTask": {
+                "@type": "ConstantCurrentCharging",
+                "hasMeasurementParameter": [
+                    {
+                        "@type": "ChargingCurrent",
+                        "hasNumericalPart": {
+                            "@type": "Real",
+                            "hasNumericalValue": 0.33
+                        },
+                        "hasMeasurementUnit": "CRate"
+                    },
+                    {
+                        "@type": "UpperVoltageLimit",
+                        "hasNumericalPart": {
+                            "@type": "Real",
+                            "hasNumericalValue": 4.2
+                        },
+                        "hasMeasurementUnit": "emmo:Volt"
+                    }
+                ],
+                "hasNext": [
+                    {
+                        "@type": "ConstantVoltageCharging",
+                        "hasMeasurementParameter": [
+                            {
+                                "@type": "Voltage",
+                                "hasNumericalPart": {
+                                    "@type": "Real",
+                                    "hasNumericalValue": 4.2
+                                },
+                                "hasMeasurementUnit": "emmo:Volt"
+                            },
+                            {
+                                "@type": "CurrentLimit",
+                                "hasNumericalPart": {
+                                    "@type": "Real",
+                                    "hasNumericalValue": 0.05
+                                },
+                                "hasMeasurementUnit": "CRate"
+                            }
+                        ],
+                        "hasNext": [
+                            {
+                                "@type": "ConstantCurrentDischarging",
+                                "hasMeasurementParameter": [
+                                    {
+                                        "@type": "DischargingCurrent",
+                                        "hasNumericalPart": {
+                                            "@type": "Real",
+                                            "hasNumericalValue": 0.5
+                                        },
+                                        "hasMeasurementUnit": "CRate"
+                                    },
+                                    {
+                                        "@type": "LowerVoltageLimit",
+                                        "hasNumericalPart": {
+                                            "@type": "Real",
+                                            "hasNumericalValue": 3
+                                        },
+                                        "hasMeasurementUnit": "emmo:Volt"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "@type": [
+                "CCCVCycling",
+                "IterativeWorkflow"
+            ],
+            "rdfs:label": null,
+            "hasMeasurementParameter": {
+                "@type": "IterativeStep",
+                "hasNumericalPart": {
+                    "@type": "Real",
+                    "hasNumericalValue": 1
+                },
+                "hasMeasurementUnit": "emmo:UnitOne"
+            },
+            "hasTask": {
+                "@type": "ConstantCurrentCharging",
+                "hasMeasurementParameter": [
+                    {
+                        "@type": "ChargingCurrent",
+                        "hasNumericalPart": {
+                            "@type": "Real",
+                            "hasNumericalValue": 0.33
+                        },
+                        "hasMeasurementUnit": "CRate"
+                    },
+                    {
+                        "@type": "UpperVoltageLimit",
+                        "hasNumericalPart": {
+                            "@type": "Real",
+                            "hasNumericalValue": 4.2
+                        },
+                        "hasMeasurementUnit": "emmo:Volt"
+                    }
+                ],
+                "hasNext": [
+                    {
+                        "@type": "ConstantVoltageCharging",
+                        "hasMeasurementParameter": [
+                            {
+                                "@type": "Voltage",
+                                "hasNumericalPart": {
+                                    "@type": "Real",
+                                    "hasNumericalValue": 4.2
+                                },
+                                "hasMeasurementUnit": "emmo:Volt"
+                            },
+                            {
+                                "@type": "CurrentLimit",
+                                "hasNumericalPart": {
+                                    "@type": "Real",
+                                    "hasNumericalValue": 0.05
+                                },
+                                "hasMeasurementUnit": "CRate"
+                            }
+                        ],
+                        "hasNext": [
+                            {
+                                "@type": "InternalStep",
+                                "hasMeasurementParameter": [
+                                    {
+                                        "@type": "RestingTime",
+                                        "hasNumericalPart": {
+                                            "@type": "Real",
+                                            "hasNumericalValue": 14400
+                                        },
+                                        "hasMeasurementUnit": "emmo:Second"
+                                    }
+                                ],
+                                "hasNext": [
+                                    {
+                                        "@type": "ConstantCurrentDischarging",
+                                        "hasMeasurementParameter": [
+                                            {
+                                                "@type": "DischargingCurrent",
+                                                "hasNumericalPart": {
+                                                    "@type": "Real",
+                                                    "hasNumericalValue": 0.2
+                                                },
+                                                "hasMeasurementUnit": "CRate"
+                                            },
+                                            {
+                                                "@type": "LowerVoltageLimit",
+                                                "hasNumericalPart": {
+                                                    "@type": "Real",
+                                                    "hasNumericalValue": 3
+                                                },
+                                                "hasMeasurementUnit": "emmo:Volt"
+                                            }
+                                        ],
+                                        "hasNext": [
+                                            {
+                                                "@type": "InternalStep",
+                                                "hasMeasurementParameter": [
+                                                    {
+                                                        "@type": "RestingTime",
+                                                        "hasNumericalPart": {
+                                                            "@type": "Real",
+                                                            "hasNumericalValue": 14400
+                                                        },
+                                                        "hasMeasurementUnit": "emmo:Second"
+                                                    }
+                                                ],
+                                                "hasNext": [
+                                                    {
+                                                        "@type": "ConstantCurrentCharging",
+                                                        "hasMeasurementParameter": [
+                                                            {
+                                                                "@type": "ChargingCurrent",
+                                                                "hasNumericalPart": {
+                                                                    "@type": "Real",
+                                                                    "hasNumericalValue": 0.33
+                                                                },
+                                                                "hasMeasurementUnit": "CRate"
+                                                            },
+                                                            {
+                                                                "@type": "UpperVoltageLimit",
+                                                                "hasNumericalPart": {
+                                                                    "@type": "Real",
+                                                                    "hasNumericalValue": 4.2
+                                                                },
+                                                                "hasMeasurementUnit": "emmo:Volt"
+                                                            }
+                                                        ],
+                                                        "hasNext": [
+                                                            {
+                                                                "@type": "ConstantVoltageCharging",
+                                                                "hasMeasurementParameter": [
+                                                                    {
+                                                                        "@type": "Voltage",
+                                                                        "hasNumericalPart": {
+                                                                            "@type": "Real",
+                                                                            "hasNumericalValue": 4.2
+                                                                        },
+                                                                        "hasMeasurementUnit": "emmo:Volt"
+                                                                    },
+                                                                    {
+                                                                        "@type": "CurrentLimit",
+                                                                        "hasNumericalPart": {
+                                                                            "@type": "Real",
+                                                                            "hasNumericalValue": 0.05
+                                                                        },
+                                                                        "hasMeasurementUnit": "CRate"
+                                                                    }
+                                                                ],
+                                                                "hasNext": [
+                                                                    {
+                                                                        "@type": "InternalStep",
+                                                                        "hasMeasurementParameter": [
+                                                                            {
+                                                                                "@type": "RestingTime",
+                                                                                "hasNumericalPart": {
+                                                                                    "@type": "Real",
+                                                                                    "hasNumericalValue": 14400
+                                                                                },
+                                                                                "hasMeasurementUnit": "emmo:Second"
+                                                                            }
+                                                                        ],
+                                                                        "hasNext": [
+                                                                            {
+                                                                                "@type": "ConstantCurrentDischarging",
+                                                                                "hasMeasurementParameter": [
+                                                                                    {
+                                                                                        "@type": "DischargingCurrent",
+                                                                                        "hasNumericalPart": {
+                                                                                            "@type": "Real",
+                                                                                            "hasNumericalValue": 0.5
+                                                                                        },
+                                                                                        "hasMeasurementUnit": "CRate"
+                                                                                    },
+                                                                                    {
+                                                                                        "@type": "LowerVoltageLimit",
+                                                                                        "hasNumericalPart": {
+                                                                                            "@type": "Real",
+                                                                                            "hasNumericalValue": 3
+                                                                                        },
+                                                                                        "hasMeasurementUnit": "emmo:Volt"
+                                                                                    }
+                                                                                ],
+                                                                                "hasNext": [
+                                                                                    {
+                                                                                        "@type": "InternalStep",
+                                                                                        "hasMeasurementParameter": [
+                                                                                            {
+                                                                                                "@type": "RestingTime",
+                                                                                                "hasNumericalPart": {
+                                                                                                    "@type": "Real",
+                                                                                                    "hasNumericalValue": 14400
+                                                                                                },
+                                                                                                "hasMeasurementUnit": "emmo:Second"
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "schema:name": "CellConditioningDubarry2020",
+    "schema:citation": {
+        "@id": "https://doi.org/10.3390/electronics9010152"
+    }
+}
