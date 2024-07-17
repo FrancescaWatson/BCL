@@ -12,36 +12,36 @@
       {
         "sequence": [
           {
-            "type": "ElectricCurrent",
+            "@type": "ElectricCurrent",
             "hasNumericalValue": -0.33,
             "hasMeasurementUnit": "CRate",
             "termination": [
               {
-                "type": "Voltage",
+                "@type": "Voltage",
                 "hasNumericalValue": "UpperCutoffVoltage",
                 "hasMeasurementUnit": "emmo:Volt"
               }
             ]
           },
           {
-            "type": "Voltage",
+            "@type": "Voltage",
             "hasNumericalValue": "UpperCutoffVoltage",
             "hasMeasurementUnit": "emmo:Volt",
             "termination": [
               {
-                "type": "ElectricCurrent",
+                "@type": "ElectricCurrent",
                 "hasNumericalValue": 0.05,
                 "hasMeasurementUnit": "emmo:Ampere"
               }
             ]
           },
           {
-            "type": "ElectricCurrent",
+            "@type": "ElectricCurrent",
             "hasNumericalValue": 0.5,
             "hasMeasurementUnit": "CRate",
             "termination": [
               {
-                "type": "Voltage",
+                "@type": "Voltage",
                 "hasNumericalValue": "LowerCutoffVoltage",
                 "hasMeasurementUnit": "emmo:Volt"
               }
@@ -54,48 +54,48 @@
       {
         "sequence": [
             {
-                "type": "ElectricCurrent",
+                "@type": "ElectricCurrent",
                 "hasNumericalValue": -0.5,
                 "hasMeasurementUnit": "CRate",
                 "termination": [
                   {
-                    "type": "Voltage",
+                    "@type": "Voltage",
                     "hasNumericalValue": "UpperCutoffVoltage",
                     "hasMeasurementUnit": "emmo:Volt"
                   }
                 ]
               },
             {
-                "type": "Voltage",
+                "@type": "Voltage",
                 "hasNumericalValue": "UpperCutoffVoltage",
                 "hasMeasurementUnit": "emmo:Volt",
                 "termination": [
                   {
-                    "type": "ElectricCurrent",
+                    "@type": "ElectricCurrent",
                     "hasNumericalValue": 0.05,
                     "hasMeasurementUnit": "emmo:Ampere"
                   }
                 ]
             },
             {
-                "type": "rest",
+                "@type": "rest",
                 "hasNumericalValue": 3600,
                 "hasMeasurementUnit": "emmo:Second"
             },
             {
-                "type": "ElectricCurrent",
+                "@type": "ElectricCurrent",
                 "hasNumericalValue": 0.125,
                 "hasMeasurementUnit": "CRate",
                 "termination": [
                   {
-                    "type": "Voltage",
+                    "@type": "Voltage",
                     "hasNumericalValue": "LowerCutoffVoltage",
                     "hasMeasurementUnit": "emmo:Volt"
                   }
                 ]
             },
             {
-                "type": "rest",
+                "@type": "rest",
                 "hasNumericalValue": 60,
                 "hasMeasurementUnit": "emmo:Second"
             }         
@@ -106,52 +106,52 @@
       {
         "sequence": [
           {
-            "type": "ElectricCurrent",
+            "@type": "ElectricCurrent",
             "hasNumericalValue": -0.5,
             "hasMeasurementUnit": "CRate",
             "termination": [
               {
-                "type": "time",
+                "@type": "time",
                 "hasNumericalValue": 640,
                 "hasMeasurementUnit": "emmo:Second"
               }
             ]
           },
           {
-            "type": "rest",
+            "@type": "rest",
             "hasNumericalValue": 1800,
             "hasMeasurementUnit": "emmo:Second"
           },
           {
-            "type": "ElectricCurrent",
+            "@type": "ElectricCurrent",
             "hasNumericalValue": -1,
             "hasMeasurementUnit": "CRate",
             "termination": [
               {
-                "type": "time",
+                "@type": "time",
                 "hasNumericalValue": 20,
                 "hasMeasurementUnit": "emmo:Second"
               }
             ]
           },          {
-            "type": "rest",
+            "@type": "rest",
             "hasNumericalValue": 60,
             "hasMeasurementUnit": "emmo:Second"
           },
           {
-            "type": "ElectricCurrent",
+            "@type": "ElectricCurrent",
             "hasNumericalValue": 1,
             "hasMeasurementUnit": "CRate",
             "termination": [
               {
-                "type": "time",
+                "@type": "time",
                 "hasNumericalValue": 20,
                 "hasMeasurementUnit": "emmo:Second"
               }
             ]
           },
           {
-            "type": "rest",
+            "@type": "rest",
             "hasNumericalValue": 1800,
             "hasMeasurementUnit": "emmo:Second"
           }
