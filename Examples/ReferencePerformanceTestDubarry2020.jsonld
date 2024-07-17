@@ -4,7 +4,7 @@
         "schema": "http://schema.org/",
         "emmo": "http://emmo.info/emmo#"
     },
-    "@id": "9c62839f-02b8-45b1-a41f-907d6c20becf",
+    "@id": "f22051d8-10b0-4cfd-b75f-429e67db441f",
     "hasTask": [
         {
             "@type": [
@@ -29,7 +29,7 @@
                             "@type": "Real",
                             "hasNumericalValue": 0.5
                         },
-                        "hasMeasurementUnit": "CRate"
+                        "hasMeasurementUnit": "emmo:AmperePerAmpereHour"
                     },
                     {
                         "@type": "UpperVoltageLimit",
@@ -63,7 +63,7 @@
                                             "@type": "Real",
                                             "hasNumericalValue": 0.02
                                         },
-                                        "hasMeasurementUnit": "CRate"
+                                        "hasMeasurementUnit": "emmo:AmperePerAmpereHour"
                                     },
                                     {
                                         "@type": "UpperVoltageLimit",
@@ -118,7 +118,7 @@
                             "@type": "Real",
                             "hasNumericalValue": 0.04
                         },
-                        "hasMeasurementUnit": "CRate"
+                        "hasMeasurementUnit": "emmo:AmperePerAmpereHour"
                     },
                     {
                         "@type": "LowerVoltageLimit",
@@ -152,7 +152,7 @@
                                             "@type": "Real",
                                             "hasNumericalValue": 0.02
                                         },
-                                        "hasMeasurementUnit": "CRate"
+                                        "hasMeasurementUnit": "emmo:AmperePerAmpereHour"
                                     },
                                     {
                                         "@type": "LowerVoltageLimit",
@@ -186,7 +186,7 @@
                                                             "@type": "Real",
                                                             "hasNumericalValue": 0.04
                                                         },
-                                                        "hasMeasurementUnit": "CRate"
+                                                        "hasMeasurementUnit": "emmo:AmperePerAmpereHour"
                                                     },
                                                     {
                                                         "@type": "UpperVoltageLimit",
@@ -220,7 +220,7 @@
                                                                             "@type": "Real",
                                                                             "hasNumericalValue": 0.02
                                                                         },
-                                                                        "hasMeasurementUnit": "CRate"
+                                                                        "hasMeasurementUnit": "emmo:AmperePerAmpereHour"
                                                                     },
                                                                     {
                                                                         "@type": "UpperVoltageLimit",
@@ -283,7 +283,7 @@
                             "@type": "Real",
                             "hasNumericalValue": 0.33
                         },
-                        "hasMeasurementUnit": "CRate"
+                        "hasMeasurementUnit": "emmo:AmperePerAmpereHour"
                     },
                     {
                         "@type": "LowerVoltageLimit",
@@ -317,7 +317,7 @@
                                             "@type": "Real",
                                             "hasNumericalValue": 0.02
                                         },
-                                        "hasMeasurementUnit": "CRate"
+                                        "hasMeasurementUnit": "emmo:AmperePerAmpereHour"
                                     },
                                     {
                                         "@type": "LowerVoltageLimit",
@@ -351,7 +351,7 @@
                                                             "@type": "Real",
                                                             "hasNumericalValue": 0.33
                                                         },
-                                                        "hasMeasurementUnit": "CRate"
+                                                        "hasMeasurementUnit": "emmo:AmperePerAmpereHour"
                                                     },
                                                     {
                                                         "@type": "UpperVoltageLimit",
@@ -385,7 +385,7 @@
                                                                             "@type": "Real",
                                                                             "hasNumericalValue": 0.02
                                                                         },
-                                                                        "hasMeasurementUnit": "CRate"
+                                                                        "hasMeasurementUnit": "emmo:AmperePerAmpereHour"
                                                                     },
                                                                     {
                                                                         "@type": "UpperVoltageLimit",

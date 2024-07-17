@@ -42,11 +42,17 @@ def convert_to_json_ld(json_data):
             numerical_value = step['hasNumericalValue']
             if not isinstance(numerical_value, (int, float)):
                 numerical_value = parameters.get(numerical_value, numerical_value)
+            unit=step['hasMeasurementUnit']
+            if unit in "CRate":
+                unit="emmo:AmperePerAmpereHour"
+            termination_unit=step['termination'][0]['hasMeasurementUnit']
+            if termination_unit == "CRate":
+                termination_unit="emmo:AmperePerAmpereHour"
             task = {
                 "@type": "ConstantCurrentCharging" if numerical_value < 0 else "ConstantCurrentDischarging",
                 "hasMeasurementParameter": [
-                    create_measurement_parameter("ChargingCurrent" if numerical_value < 0 else "DischargingCurrent", abs(numerical_value), step['hasMeasurementUnit']),
-                    create_measurement_parameter("UpperVoltageLimit" if numerical_value < 0 else "LowerVoltageLimit", parameters.get(step['termination'][0]['hasNumericalValue'], step['termination'][0]['hasNumericalValue']), step['termination'][0]['hasMeasurementUnit'])
+                    create_measurement_parameter("ChargingCurrent" if numerical_value < 0 else "DischargingCurrent", abs(numerical_value), unit),
+                    create_measurement_parameter("UpperVoltageLimit" if numerical_value < 0 else "LowerVoltageLimit", parameters.get(step['termination'][0]['hasNumericalValue'], step['termination'][0]['hasNumericalValue']), termination_unit)
                 ]
             }
         elif step['@type'] == 'Voltage':
