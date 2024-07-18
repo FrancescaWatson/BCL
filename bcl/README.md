@@ -1,4 +1,4 @@
-#BCL
+# BCL
 This folder contains the main scripts used in the BCL project. Each script is essential for the conversion of battery cycling data into different formats, supporting the project's overall goal of standardizing and linking battery data. Below, you will find descriptions of the main scripts and their purposes.
 
 Scripts
@@ -10,7 +10,7 @@ Maps these parameters and instructions into a structure that can be utilized by 
 Usage:
 See usage in the TestNotebook provided
 
-1. convertToJsonld.py
+2. convertToJsonld.py
 Description: This script converts JSON data into JSON-LD (JSON for Linked Data) format. JSON-LD is a method of encoding linked data using JSON, which enhances the interoperability and discoverability of the data across different platforms.
 Functionality:
 Transforms BCL structured JSON into JSON-LD, embedding context and linking information to standard vocabularies such as EMMO (Elementary Multiperspective Material Ontology).
