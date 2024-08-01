@@ -1,12 +1,9 @@
 {
-  "@context": "https://w3id.org/emmo/domain/battery/context",
-  "schema:name": "Cyclelifecondition",
-  "schema:subjectOf": "LG Chem INR18650 MJ1", "@id": "https://www.wikidata.org/wiki/Q120766894",
-  "schema:citation": "Specification%20INR18650MJ1%2022.08.2014.pdf",
+  "name": "Cyclelifecondition",
+  "subjectOf": "LG Chem INR18650 MJ1", "id": "https://www.wikidata.org/wiki/Q120766894",
+  "citation": "Specification%20INR18650MJ1%2022.08.2014.pdf",
     "parameters": {
         "Capacity": 3.4,
-        "NumberOfCellsConnectedInSeries": 1,
-        "StandardVoltageCell": 3.635,
         "LowerCutoffVoltage": 2.5,
         "UpperCutoffVoltage": 4.2
     },
@@ -14,50 +11,50 @@
       {
         "sequence": [
           {
-            "@type": "ElectricCurrent",
-            "hasNumericalValue": -1.500,
-            "hasMeasurementUnit": "emmo:Ampere",
+            "type": "ElectricCurrent",
+            "value": -1.500,
+            "unit": "Ampere",
             "termination": [
               {
-                "@type": "Voltage",
-                "hasNumericalValue": "UpperCutoffVoltage",
-                "hasMeasurementUnit": "emmo:Volt"
+                "type": "Voltage",
+                "value": "UpperCutoffVoltage",
+                "unit": "Volt"
               }
             ]
           },
           {
-            "@type": "Voltage",
-            "hasNumericalValue": 4.2,
-            "hasMeasurementUnit": "emmo:Volt",
+            "type": "Voltage",
+            "value": 4.2,
+            "unit": "Volt",
             "termination": [
               {
-                "@type": "ElectricCurrent",
-                "hasMeasurementUnit": "emmo:Ampere",
-                "hasNumericalValue": 0.100
+                "type": "ElectricCurrent",
+                "unit": "Ampere",
+                "value": 0.100
               }
             ]
           },
           {
-            "@type": "rest",
-            "hasNumericalValue": 600,
-            "hasMeasurementUnit": "emmo:Second"
+            "type": "Rest",
+            "value": 600,
+            "unit": "Second"
           },
           {
-            "@type": "ElectricCurrent",
-            "hasNumericalValue": 4.000,
-            "hasMeasurementUnit": "emmo:Ampere",
+            "type": "ElectricCurrent",
+            "value": 4.000,
+            "unit": "Ampere",
             "termination": [
               {
-                "@type": "Voltage",
-                "hasNumericalValue": "LowerCutoffVoltage",
-                "hasMeasurementUnit": "emmo:Volt"
+                "type": "Voltage",
+                "value": "LowerCutoffVoltage",
+                "unit": "Volt"
               }
             ]
           },
           {
-            "@type": "rest",
-            "hasNumericalValue": 600,
-            "hasMeasurementUnit": "emmo:Second"
+            "type": "Rest",
+            "value": 600,
+            "unit": "Second"
           }
         ],
         "name": "HighDrainrateChargeDischargecondition",
@@ -66,38 +63,38 @@
       {
         "sequence": [
           {
-            "@type": "ElectricCurrent",
-            "hasNumericalValue": -0.5,
-            "hasMeasurementUnit": "CRate",
+            "type": "ElectricCurrent",
+            "value": -0.5,
+            "unit": "CRate",
             "termination": [
               {
-                "@type": "Voltage",
-                "hasNumericalValue": "UpperCutoffVoltage",
-                "hasMeasurementUnit": "emmo:Volt"
+                "type": "Voltage",
+                "value": "UpperCutoffVoltage",
+                "unit": "Volt"
               }
             ]
           },
           {
-            "@type": "Voltage",
-            "hasNumericalValue": 4.2,
-            "hasMeasurementUnit": "emmo:Volt",
+            "type": "Voltage",
+            "value": 4.2,
+            "unit": "Volt",
             "termination": [
               {
-                "@type": "ElectricCurrent",
-                "hasMeasurementUnit": "emmo:Ampere",
-                "hasNumericalValue": 0.050
+                "type": "ElectricCurrent",
+                "unit": "Ampere",
+                "value": 0.050
               }
             ]
           },       
           {
-            "@type": "ElectricCurrent",
-            "hasNumericalValue": 0.2,
-            "hasMeasurementUnit": "CRate",
+            "type": "ElectricCurrent",
+            "value": 0.2,
+            "unit": "CRate",
             "termination": [
               {
-                "@type": "Voltage",
-                "hasNumericalValue": "LowerCutoffVoltage",
-                "hasMeasurementUnit": "emmo:Volt"
+                "type": "Voltage",
+                "value": "LowerCutoffVoltage",
+                "unit": "Volt"
               }
             ]
           }

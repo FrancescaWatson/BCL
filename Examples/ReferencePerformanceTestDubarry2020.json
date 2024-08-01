@@ -1,12 +1,9 @@
 {
-    "@context": "https://w3id.org/emmo/domain/battery/context",
-    "schema:name": "ReferencePerformanceTestDubarry2020",
-    "schema:citation": {
-    "@id": "https://doi.org/10.3390/electronics9010152"},
+    "name": "ReferencePerformanceTestDubarry2020",
+    "citation": {
+    "id": "https://doi.org/10.3390/electronics9010152"},
     "parameters": {
         "Capacity": 2.5,
-        "NumberOfCellsConnectedInSeries": 1,
-        "StandardVoltageCell": 3.7,
         "LowerCutoffVoltage": 3,
         "UpperCutoffVoltage": 4.2
     },
@@ -14,38 +11,38 @@
       {
         "sequence": [
           {
-            "@type": "ElectricCurrent",
-            "hasNumericalValue": -0.5,
-            "hasMeasurementUnit": "CRate",
+            "type": "ElectricCurrent",
+            "value": -0.5,
+            "unit": "CRate",
             "termination": [
               {
-                "@type": "Voltage",
-                "hasNumericalValue": "UpperCutoffVoltage",
-                "hasMeasurementUnit": "emmo:Volt"
+                "type": "Voltage",
+                "value": "UpperCutoffVoltage",
+                "unit": "Volt"
               }
             ]
           },
           {
-            "@type": "rest",
-            "hasNumericalValue": 14400,
-            "hasMeasurementUnit": "emmo:Second"
+            "type": "Rest",
+            "value": 14400,
+            "unit": "Second"
           },
           {
-            "@type": "ElectricCurrent",
-            "hasNumericalValue": -0.02,
-            "hasMeasurementUnit": "CRate",
+            "type": "ElectricCurrent",
+            "value": -0.02,
+            "unit": "CRate",
             "termination": [
               {
-                "@type": "Voltage",
-                "hasNumericalValue": "UpperCutoffVoltage",
-                "hasMeasurementUnit": "emmo:Volt"
+                "type": "Voltage",
+                "value": "UpperCutoffVoltage",
+                "unit": "Volt"
               }
             ]
           },
           {
-            "@type": "rest",
-            "hasNumericalValue": 14400,
-            "hasMeasurementUnit": "emmo:Second"
+            "type": "Rest",
+            "value": 14400,
+            "unit": "Second"
           }
         ],
         "name": "Conditioning",
@@ -54,72 +51,72 @@
       {
         "sequence": [
           {
-            "@type": "ElectricCurrent",
-            "hasNumericalValue": 0.04,
-            "hasMeasurementUnit": "CRate",
+            "type": "ElectricCurrent",
+            "value": 0.04,
+            "unit": "CRate",
             "termination": [
               {
-                "@type": "Voltage",
-                "hasNumericalValue": "LowerCutoffVoltage",
-                "hasMeasurementUnit": "emmo:Volt"
+                "type": "Voltage",
+                "value": "LowerCutoffVoltage",
+                "unit": "Volt"
               }
             ]
           },
           {
-            "@type": "rest",
-            "hasNumericalValue": 14400,
-            "hasMeasurementUnit": "emmo:Second"
+            "type": "Rest",
+            "value": 14400,
+            "unit": "Second"
           },
           {
-            "@type": "ElectricCurrent",
-            "hasNumericalValue": 0.02,
-            "hasMeasurementUnit": "CRate",
+            "type": "ElectricCurrent",
+            "value": 0.02,
+            "unit": "CRate",
             "termination": [
               {
-                "@type": "Voltage",
-                "hasNumericalValue": "LowerCutoffVoltage",
-                "hasMeasurementUnit": "emmo:Volt"
+                "type": "Voltage",
+                "value": "LowerCutoffVoltage",
+                "unit": "Volt"
               }
             ]
           },
           {
-            "@type": "rest",
-            "hasNumericalValue": 14400,
-            "hasMeasurementUnit": "emmo:Second"
+            "type": "Rest",
+            "value": 14400,
+            "unit": "Second"
           },
           {
-            "@type": "ElectricCurrent",
-            "hasNumericalValue": -0.04,
-            "hasMeasurementUnit": "CRate",
+            "type": "ElectricCurrent",
+            "value": -0.04,
+            "unit": "CRate",
             "termination": [
               {
-                "@type": "Voltage",
-                "hasNumericalValue": "UpperCutoffVoltage",
-                "hasMeasurementUnit": "emmo:Volt"
+                "type": "Voltage",
+                "value": "UpperCutoffVoltage",
+                "unit": "Volt"
               }
             ]
           },
           {
-            "@type": "rest",
-            "hasNumericalValue": 14400,
-            "hasMeasurementUnit": "emmo:Second"
+            "type": "Rest",
+            "value": 14400,
+            "unit": "Second"
           },
           {
-            "@type": "ElectricCurrent",
-            "hasNumericalValue": -0.02,
-            "hasMeasurementUnit": "CRate",
+            "type": "ElectricCurrent",
+            "value": -0.02,
+            "unit": "CRate",
             "termination": [
               {
-                "@type": "Voltage",
-                "hasNumericalValue": "UpperCutoffVoltage",
-                "hasMeasurementUnit": "emmo:Volt"
+                "type": "Voltage",
+                "value": "UpperCutoffVoltage",
+                "unit": "Volt"
               }
             ]
           },
           {
-            "@type": "rest",
-            "hasNumericalValue": 14400,
-            "hasMeasurementUnit": "emmo:Second"
+            "type": "Rest",
+            "value": 14400,
+            "unit": "Second"
           }
         ],
       "name": "LowRate",
@@ -128,72 +125,72 @@
       {
         "sequence": [
           {
-            "@type": "ElectricCurrent",
-            "hasNumericalValue": 0.33,
-            "hasMeasurementUnit": "CRate",
+            "type": "ElectricCurrent",
+            "value": 0.33,
+            "unit": "CRate",
             "termination": [
               {
-                "@type": "Voltage",
-                "hasNumericalValue": "LowerCutoffVoltage",
-                "hasMeasurementUnit": "emmo:Volt"
+                "type": "Voltage",
+                "value": "LowerCutoffVoltage",
+                "unit": "Volt"
               }
             ]
           },
           {
-            "@type": "rest",
-            "hasNumericalValue": 14400,
-            "hasMeasurementUnit": "emmo:Second"
+            "type": "Rest",
+            "value": 14400,
+            "unit": "Second"
           },
           {
-            "@type": "ElectricCurrent",
-            "hasNumericalValue": 0.02,
-            "hasMeasurementUnit": "CRate",
+            "type": "ElectricCurrent",
+            "value": 0.02,
+            "unit": "CRate",
             "termination": [
               {
-                "@type": "Voltage",
-                "hasNumericalValue": "LowerCutoffVoltage",
-                "hasMeasurementUnit": "emmo:Volt"
+                "type": "Voltage",
+                "value": "LowerCutoffVoltage",
+                "unit": "Volt"
               }
             ]
           },
           {
-            "@type": "rest",
-            "hasNumericalValue": 14400,
-            "hasMeasurementUnit": "emmo:Second"
+            "type": "Rest",
+            "value": 14400,
+            "unit": "Second"
           },
           {
-            "@type": "ElectricCurrent",
-            "hasNumericalValue": -0.33,
-            "hasMeasurementUnit": "CRate",
+            "type": "ElectricCurrent",
+            "value": -0.33,
+            "unit": "CRate",
             "termination": [
               {
-                "@type": "Voltage",
-                "hasNumericalValue": "UpperCutoffVoltage",
-                "hasMeasurementUnit": "emmo:Volt"
+                "type": "Voltage",
+                "value": "UpperCutoffVoltage",
+                "unit": "Volt"
               }
             ]
           },
           {
-            "@type": "rest",
-            "hasNumericalValue": 14400,
-            "hasMeasurementUnit": "emmo:Second"
+            "type": "Rest",
+            "value": 14400,
+            "unit": "Second"
           },
           {
-            "@type": "ElectricCurrent",
-            "hasNumericalValue": -0.02,
-            "hasMeasurementUnit": "CRate",
+            "type": "ElectricCurrent",
+            "value": -0.02,
+            "unit": "CRate",
             "termination": [
               {
-                "@type": "Voltage",
-                "hasNumericalValue": "UpperCutoffVoltage",
-                "hasMeasurementUnit": "emmo:Volt"
+                "type": "Voltage",
+                "value": "UpperCutoffVoltage",
+                "unit": "Volt"
               }
             ]
           },
           {
-            "@type": "rest",
-            "hasNumericalValue": 14400,
-            "hasMeasurementUnit": "emmo:Second"
+            "type": "Rest",
+            "value": 14400,
+            "unit": "Second"
           }
         ],
       "name": "NominalRate",

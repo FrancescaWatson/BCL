@@ -1,10 +1,7 @@
 {
-  "@context": "https://w3id.org/emmo/domain/battery/context",
-  "schema:name": "StandardCharacterisation",
+  "name": "StandardCharacterisation",
     "parameters": {
         "Capacity": 2.5,
-        "NumberOfCellsConnectedInSeries": 1,
-        "StandardVoltageCell": 3.7,
         "LowerCutoffVoltage": 3,
         "UpperCutoffVoltage": 4.2
     },
@@ -12,38 +9,38 @@
       {
         "sequence": [
           {
-            "@type": "ElectricCurrent",
-            "hasNumericalValue": -0.33,
-            "hasMeasurementUnit": "CRate",
+            "type": "ElectricCurrent",
+            "value": -0.33,
+            "unit": "CRate",
             "termination": [
               {
-                "@type": "Voltage",
-                "hasNumericalValue": "UpperCutoffVoltage",
-                "hasMeasurementUnit": "emmo:Volt"
+                "type": "Voltage",
+                "value": "UpperCutoffVoltage",
+                "unit": "Volt"
               }
             ]
           },
           {
-            "@type": "Voltage",
-            "hasNumericalValue": "UpperCutoffVoltage",
-            "hasMeasurementUnit": "emmo:Volt",
+            "type": "Voltage",
+            "value": "UpperCutoffVoltage",
+            "unit": "Volt",
             "termination": [
               {
-                "@type": "ElectricCurrent",
-                "hasNumericalValue": 0.05,
-                "hasMeasurementUnit": "emmo:Ampere"
+                "type": "ElectricCurrent",
+                "value": 0.05,
+                "unit": "Ampere"
               }
             ]
           },
           {
-            "@type": "ElectricCurrent",
-            "hasNumericalValue": 0.5,
-            "hasMeasurementUnit": "CRate",
+            "type": "ElectricCurrent",
+            "value": 0.5,
+            "unit": "CRate",
             "termination": [
               {
-                "@type": "Voltage",
-                "hasNumericalValue": "LowerCutoffVoltage",
-                "hasMeasurementUnit": "emmo:Volt"
+                "type": "Voltage",
+                "value": "LowerCutoffVoltage",
+                "unit": "Volt"
               }
             ]
           }
@@ -54,67 +51,67 @@
       {
         "sequence": [
             {
-                "@type": "ElectricCurrent",
-                "hasNumericalValue": -0.33,
-                "hasMeasurementUnit": "CRate",
+                "type": "ElectricCurrent",
+                "value": -0.33,
+                "unit": "CRate",
                 "termination": [
                   {
-                    "@type": "Voltage",
-                    "hasNumericalValue": "UpperCutoffVoltage",
-                    "hasMeasurementUnit": "emmo:Volt"
+                    "type": "Voltage",
+                    "value": "UpperCutoffVoltage",
+                    "unit": "Volt"
                   }
                 ]
               },
             {
-                "@type": "Voltage",
-                "hasNumericalValue": "UpperCutoffVoltage",
-                "hasMeasurementUnit": "emmo:Volt",
+                "type": "Voltage",
+                "value": "UpperCutoffVoltage",
+                "unit": "Volt",
                 "termination": [
                   {
-                    "@type": "ElectricCurrent",
-                    "hasNumericalValue": 0.05,
-                    "hasMeasurementUnit": "emmo:Ampere"
+                    "type": "ElectricCurrent",
+                    "value": 0.05,
+                    "unit": "Ampere"
                   }
                 ]
             },
             {
-                "@type": "rest",
-                "hasNumericalValue": 3600,
-                "hasMeasurementUnit": "emmo:Second"
+                "type": "Rest",
+                "value": 3600,
+                "unit": "Second"
             },
             {
-                "@type": "ElectricCurrent",
-                "hasNumericalValue": 0.04,
-                "hasMeasurementUnit": "CRate",
+                "type": "ElectricCurrent",
+                "value": 0.04,
+                "unit": "CRate",
                 "termination": [
                   {
-                    "@type": "Voltage",
-                    "hasNumericalValue": "LowerCutoffVoltage",
-                    "hasMeasurementUnit": "emmo:Volt"
+                    "type": "Voltage",
+                    "value": "LowerCutoffVoltage",
+                    "unit": "Volt"
                   }
                 ]
             },
             {
-                "@type": "rest",
-                "hasNumericalValue": 3600,
-                "hasMeasurementUnit": "emmo:Second"
+                "type": "Rest",
+                "value": 3600,
+                "unit": "Second"
             },
             {
-                "@type": "ElectricCurrent",
-                "hasNumericalValue": -0.04,
-                "hasMeasurementUnit": "CRate",
+                "type": "ElectricCurrent",
+                "value": -0.04,
+                "unit": "CRate",
                 "termination": [
                   {
-                    "@type": "Voltage",
-                    "hasNumericalValue": "UpperCutoffVoltage",
-                    "hasMeasurementUnit": "emmo:Volt"
+                    "type": "Voltage",
+                    "value": "UpperCutoffVoltage",
+                    "unit": "Volt"
                   }
                 ]
             },
             {
-                "@type": "rest",
-                "hasNumericalValue": 3600,
-                "hasMeasurementUnit": "emmo:Second"
+                "type": "Rest",
+                "value": 3600,
+                "unit": "Second"
             }
         ],
         "name": "PseudoOCV",
@@ -123,21 +120,21 @@
       {
         "sequence": [
           {
-            "@type": "ElectricCurrent",
-            "hasNumericalValue": 0.5,
-            "hasMeasurementUnit": "CRate",
+            "type": "ElectricCurrent",
+            "value": 0.5,
+            "unit": "CRate",
             "termination": [
               {
-                "@type": "time",
-                "hasNumericalValue": 360,
-                "hasMeasurementUnit": "emmo:Second"
+                "type": "time",
+                "value": 360,
+                "unit": "Second"
               }
             ]
           },
           {
-            "@type": "rest",
-            "hasNumericalValue": 12600,
-            "hasMeasurementUnit": "emmo:Second"
+            "type": "Rest",
+            "value": 12600,
+            "unit": "Second"
           }
         ],
         "name": "GITT_Discharge",
@@ -146,21 +143,21 @@
       {
         "sequence": [
           {
-            "@type": "ElectricCurrent",
-            "hasNumericalValue": -0.5,
-            "hasMeasurementUnit": "CRate",
+            "type": "ElectricCurrent",
+            "value": -0.5,
+            "unit": "CRate",
             "termination": [
               {
-                "@type": "time",
-                "hasNumericalValue": 360,
-                "hasMeasurementUnit": "emmo:Second"
+                "type": "time",
+                "value": 360,
+                "unit": "Second"
               }
             ]
           },
           {
-            "@type": "rest",
-            "hasNumericalValue": 12600,
-            "hasMeasurementUnit": "emmo:Second"
+            "type": "Rest",
+            "value": 12600,
+            "unit": "Second"
           }
         ],
         "name": "GITT_Charge",

@@ -17,10 +17,10 @@ def read_json_to_dict(file_path: str) -> List[str]:
      "TimeDimension": "hour",
      "time": "sec",
      "CRate": "C",
-     "emmo:Volt": "V",
-     "emmo:Ampere": "A",
-     "emmo:Second": "sec",
-     "emmo:Hour": "hour"
+     "Volt": "V",
+     "Ampere": "A",
+     "Second": "sec",
+     "Hour": "hour"
      }
     
     # Iterate through each instruction
@@ -29,13 +29,13 @@ def read_json_to_dict(file_path: str) -> List[str]:
         sequence_output_list = []
         # Iterate through each step in the sequence
         for step in sequence:
-            step_type = step.get('@type', '')
-            value = step.get('hasNumericalValue', '')
-            unit = step.get('hasMeasurementUnit', '')
+            step_type = step.get('type', '')
+            value = step.get('value', '')
+            unit = step.get('unit', '')
             termination = step.get('termination', [{}])[0]
-            termination_type = termination.get('@type', '')
-            termination_value = termination.get('hasNumericalValue', '')
-            termination_unit = termination.get('hasMeasurementUnit', '')
+            termination_type = termination.get('type', '')
+            termination_value = termination.get('value', '')
+            termination_unit = termination.get('unit', '')
 
             # Check if value refers to a parameter
             if value in json_content['parameters']:
@@ -46,8 +46,8 @@ def read_json_to_dict(file_path: str) -> List[str]:
                 termination_value = json_content['parameters'][termination_value]
             
             # Generate the instruction string
-            if step_type.lower() == 'rest':
-                time = step.get('hasNumericalValue', '')
+            if step_type == 'Rest':
+                time = step.get('value', '')
                 sequence_output_list.append(f"Rest for {time / 3600} {type_to_units.get('TimeDimension', 'hour')}")
             elif step_type == 'ElectricCurrent':
                 if value > 0:

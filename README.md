@@ -15,21 +15,21 @@ Battery Cycling Language
     {
       "sequence": [
         {
-          "@type": "ElectricCurrent",
-          "hasNumericalValue": -1,
-          "hasMeasurementUnit": "CRate",
+          "type": "ElectricCurrent",
+          "value": -1,
+          "unit": "CRate",
           "termination": [
             {
-              "@type": "Voltage",
-              "hasNumericalValue": "UpperCutoffVoltage",
-              "hasMeasurementUnit": "emmo:Volt"
+              "type": "Voltage",
+              "value": "UpperCutoffVoltage",
+              "unit": "Volt"
             }
           ]
         }
       ]
     }
   ],
-    "schema:name": "MinimalExample",
+    "name": "MinimalExample",
 }
 ```
 
@@ -161,23 +161,22 @@ All steps included may be given within the [`BatteryCycling`](http://emmo.info/b
 
 The instruction consists of sequences. Sequences can have loops but the default is no repetition (1).
 
-There are several types of blocks within a sequence: "current", "voltage", "rest", "power", or "resistance".
+There are several types of blocks within a sequence: "ElectricCurrent", "Voltage", "Rest". #Update
 
 ### Block within a Sequence
 
-| Property   | Type   | Description                                                                 |
-|------------|--------|-----------------------------------------------------------------------------|
-| type       | string | "current", "voltage", "rest", "power", or "resistance"                      |
-| value      | float  | Value of the block                                                          |
-| unit       | string | (optional) Standard units: current:A, voltage:V, rest:sec, power:W, resistance:Ohm |
-| termination| block  | See below                                                                   |
-| duration   | float  | (optional) Time in seconds                                                  |
-| period     | float  | (optional) Time in seconds                                                  |
-| temperature| float  | (optional) Time in seconds                                                  |
+| Property   | Type   | Description                                                                                       |
+|------------|--------|---------------------------------------------------------------------------------------------------|
+| type       | string | "ElectricCurrent", "Voltage", "Rest"                                                              |
+| value      | float  | Value of the block                                                                                |
+| unit       | string | Example ElectricCurrent:Ampere, Voltage:Volt, Rest:Second  for also CRate for "ElectricCurrent"   |
+| termination| block  | See below                                                                                         |
+
 
 ### Termination
 
-| Property | Type  | Description                                        |
-|----------|-------|----------------------------------------------------|
-| value    | float | Value of the block                                 |
-| unit     | string| Example current:A, voltage:V, time:sec             |
+| Property | Type  | Description                                                    |
+|----------|-------|----------------------------------------------------------------|
+| type     | string| "ElectricCurrent", "Voltage", "Rest"                           |
+| value    | float | Value of the block                                             |
+| unit     | string| Example ElectricCurrent:Ampere, Voltage:Volt, Rest:Second      |
